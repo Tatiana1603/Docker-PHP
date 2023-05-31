@@ -45,7 +45,8 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
-      - ./dbdata:/var/lib/mysql  
+      - ./dbdata:/var/lib/mysql
+      - ./mysql/etc/my.cnf:/etc/mysql/conf.d/mysql.cnf
     networks:
       - app-network
 
